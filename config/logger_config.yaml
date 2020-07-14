@@ -1,0 +1,40 @@
+version: 1
+objects:
+  queue:
+    class: queue.Queue
+    maxsize: 1000
+formatters:
+  simple:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: simple
+    stream: ext://sys.stdout  
+  file:
+    class: logging.FileHandler
+    level: INFO
+    filename: 'log/update.log'
+    formatter: simple
+  discord:
+    class: modern_renaissance.log.logger_util.DiscordHandler
+    level: 44
+    formatter: simple
+  queue_listener:
+    class: modern_renaissance.log.logger_util.QueueListenerHandler
+    respect_handler_level: True
+    handlers:
+      - cfg://handlers.console
+      - cfg://handlers.discord
+      - cfg://handlers.file
+    queue: cfg://objects.queue
+loggers:
+  modern_renaissance.modern_renaissance:
+    # level: ERROR
+    handlers:
+      - queue_listener
+    propagate: false
+root:
+  level: INFO
+  handlers: [console]

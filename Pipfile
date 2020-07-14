@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+jupyter = "*"
+ezsheets = "*"
+black = "==19.10b0"
+oauth2client = "*"
+gspread = "*"
+pandas = "*"
+pyyaml = "*"
+scipy = "*"
+numba = "*"
+tqdm = "*"
+seaborn = "*"
+discord-webhook = "*"
+modern-renaissance = {editable = true, path = "."}
+quant-helper = {editable = true, path = "./../quant_helper"}
+
+[requires]
+python_version = "3.7"

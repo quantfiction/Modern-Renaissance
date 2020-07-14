@@ -71,6 +71,9 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# random cred files
+misc/
+
 # pyenv
 .python-version
 
