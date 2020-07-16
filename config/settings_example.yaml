@@ -1,0 +1,3 @@
+urls:
+    discord:
+        log: WEBHOOK_URL_HERE

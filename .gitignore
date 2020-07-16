@@ -109,3 +109,6 @@ ENV/
 
 # Use Rmd files for version control
 *.ipynb
+
+# Don't use actual settings file
+config/settings.yaml
