@@ -84,7 +84,7 @@ class DiscordHandler(logging.Handler):
             # record.stack_info,
         ]
 
-        filtered_desc = [record for record in desc if record != None]
+        filtered_desc = [record for record in desc if record is not None]
 
         embed = DiscordEmbed(
             # title="Update",
