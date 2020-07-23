@@ -26,8 +26,9 @@ def execute_notebook(notebook_name, **kwargs):
         nb = nbformat.read(f, as_version=nbformat.NO_CONVERT)
 
     # execute notebook
+    execute_path = os.path.abspath(os.path.join(__file__, "..", ".."))
     ep = ExecutePreprocessor(timeout=10000)
-    ep.preprocess(nb, {"metadata": {"path": read_path}})
+    ep.preprocess(nb, {"metadata": {"path": execute_path}})
 
     # save to reports directory
     with open(write_filename, "w", encoding="utf-8") as f:
