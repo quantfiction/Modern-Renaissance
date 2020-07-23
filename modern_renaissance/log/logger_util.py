@@ -39,7 +39,7 @@ def _resolve_queue(q):
 
 class QueueListenerHandler(QueueHandler):
     def __init__(
-        self, handlers, respect_handler_level=False, auto_run=True, queue=Queue(-1)
+        self, handlers, respect_handler_level=True, auto_run=True, queue=Queue(-1)
     ):
         queue = _resolve_queue(queue)
         super().__init__(queue)

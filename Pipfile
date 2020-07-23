@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 pre-commit = "*"
+autopep8 = "*"
 
 [packages]
 jupyter = "*"
@@ -21,6 +22,8 @@ seaborn = "*"
 discord-webhook = "*"
 modern-renaissance = {editable = true, path = "."}
 quant-helper = {editable = true, path = "./../quant_helper"}
+mintapi = "*"
+ccxt = "*"
 
 [requires]
 python_version = "3.7"

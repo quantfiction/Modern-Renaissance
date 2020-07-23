@@ -35,6 +35,16 @@ loggers:
     handlers:
       - queue_listener
     propagate: false
+  modern_renaissance.gspread:
+    # level: ERROR
+    handlers:
+      - queue_listener
+    propagate: false
+  modern_renaissance.update:
+    # level: ERROR
+    handlers:
+      - queue_listener
+    propagate: false
 root:
   level: INFO
   handlers: [console]
